@@ -33,6 +33,13 @@ Route::get("/deleteuser/{id}",[AdminController::class,"deleteuser"]);
 
 Route::get("/redirects",[HomeController::class,"redirects"]);
 
+
+
+Route::post("/reservation",[AdminController::class,"reservation"]);
+
+
+Route::get("/viewreservation",[AdminController::class,"viewreservation"]);
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
