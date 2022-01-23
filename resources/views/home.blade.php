@@ -86,7 +86,12 @@ https://templatemo.com/tm-558-klassy-cafe
 
                             <li class="scroll-to-section" style="background-color:red;"><a href="#reservation">
                                 @auth
+
+                                <a href="{{url('/showcart',Auth::user()->id)}}">
+
                             Cart[{{$count}}]</a></li> 
+
+                                </a>
                             @endauth
 
 
@@ -492,6 +497,14 @@ https://templatemo.com/tm-558-klassy-cafe
             </div>
         </div>
     </section>
+
+
+
+
+
+
+
+    
     <!-- ***** Chefs Area Ends ***** --> 
     
     <!-- ***** Footer Start ***** -->
