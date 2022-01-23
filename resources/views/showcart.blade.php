@@ -29,6 +29,9 @@ https://templatemo.com/tm-558-klassy-cafe
 
     <link rel="stylesheet" href="assets/css/lightbox.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
     </head>
     
     <body>
@@ -164,7 +167,58 @@ https://templatemo.com/tm-558-klassy-cafe
 
     </table>
 
+    <div align="center" style="padding: 10px; ">
+
+            <button class="btn btn-primary" id="order">Order Now</button>
+
+
     </div>
+
+    <div id="appear" align="center" style="padding: 10px; display:none;" >
+        <div style="padding: 10px;">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Name">
+        </div>
+
+        <div style="padding: 10px;">
+            <label>Phone</label>
+            <input type="number" name="phone" placeholder="Phone Number">
+        </div>
+
+        <div style="padding: 10px;">
+            <label>Address</label>
+            <input type="text" name="address" placeholder="Address">
+        </div>
+
+        <div style="padding: 10px;">
+            <input class="btn btn-success" type="submit" value="Order Confirm">
+            <button id="close" class="btn btn-danger">Close</button>
+        </div>
+
+    </div>
+
+
+    </div>
+
+    <script type="text/javascript">
+
+        $("#order").click(
+            function()
+            {
+                $("#appear").show();
+            }
+        );
+
+
+        $("#close").click(
+            function()
+            {
+                $("#appear").hide();
+            }
+        );
+
+
+    </script>
 
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>
