@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Food;
 use App\Models\Foodchef;
 use App\Models\Cart;
+use App\Models\Order;
 
 
 
@@ -86,4 +87,28 @@ class HomeController extends Controller
 
             return redirect()->back();
         }
+
+
+        public function orderconfirm(Request $request)
+        {
+            foreach($request->foodname as $key=>$foodname)
+            {
+                $data=new order;
+
+                $data->foodname=$foodname;
+                $data->price=$request->price[$key];
+                $data->quantity=$request->quantity[$key];
+                $data->name=$request->name;
+                $data->phone=$request->phone;
+                $data->address=$request->address;
+
+                $data->save();
+
+            }
+
+            return redirect()->back();
+        }
+
+
+
 }
